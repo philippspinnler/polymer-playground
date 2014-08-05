@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polymer Playground</title>
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+    <link rel="import" href="bower_components/core-elements/core-elements.html">
+    <link rel="import" href="elements/json-users/json-users.html">
+</head>
+<body>
+    <core-scaffold>
+        <core-header-panel navigation flex mode="seamed">
+            <core-toolbar>Polymer-Playground</core-toolbar>
+            <core-menu theme="core-light-theme">
+                <core-item icon="view-module" label="Dashboard"></core-item>
+                <core-item icon="people" label="Users"></core-item>
+            </core-menu>
+        </core-header-panel>
+        <div tool>Users</div>
+        <div>
+            <json-users></json-users>
+        </div>
+    </core-scaffold>
+</body>
+</html>

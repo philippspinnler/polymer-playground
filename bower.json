@@ -1,0 +1,26 @@
+{
+  "name": "polymer-playground",
+  "version": "0.0.1",
+  "homepage": "https://github.com/philippspinnler/polymer-playground",
+  "authors": [
+    "Philipp Spinnler <philipp@spinnler.ch>"
+  ],
+  "description": "Just a playground for polymer",
+  "keywords": [
+    "polymer",
+    "playground"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.3",
+    "core-elements": "Polymer/core-elements#~0.3.4",
+    "paper-elements": "Polymer/paper-elements#~0.3.4"
+  }
+}

@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../rest-client/rest-client.html">
+
+<polymer-element name="json-users">
+    <template>
+        <rest-client response="{{users}}"></rest-client>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+            </tr>
+            <tr template repeat="{{user in users.users}}">
+                <td>
+                    {{user.name}}
+                </td>
+                <td>
+                    {{user.id}}
+                </td>
+            </tr>
+        </table>
+    </template>
+
+    <script>
+        Polymer('json-users', {
+        });
+    </script>
+</polymer-element>

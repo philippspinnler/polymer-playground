@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="../../bower_components/core-localstorage/core-localstorage.html">
+
+<polymer-element name="rest-client" attributes="response">
+    <template>
+        <core-localstorage name="token" value="{{token}}"></core-localstorage>
+        <core-ajax
+                auto
+                headers='{"Authorization": "Bearer {{token.access_token}}"}'
+                url="http://localhost:8080/v2/api/users"
+                response="{{response}}"
+                handleAs="json"
+                on-core-error="{{onRestError}}"
+                on-core-complete="{{onRestComplete}}"
+                on-core-response="{{onRestResponse}}"></core-ajax>
+    </template>
+    <script>
+        Polymer('rest-client', {
+            onRestError: function(event, response) {
+                console.log(response);
+            },
+            onRestComplete: function(event, response) {
+                console.log(response);
+            },
+            onRestResponse: function(event, response) {
+                console.log(response);
+            }
+
+        });
+    </script>
+</polymer-element>
